@@ -10,7 +10,7 @@ body {
 
 .hero {
     height: 822px;
-    background-image: url("/assets/Desktop_Backgrounds_1920x1200_6\ 3.png");
+    background-image: url("../assets/Desktop_Backgrounds_1920x1200_6\ 3.png");
     background-repeat: no-repeat;
     background-size: 100%;
     display: flex;
@@ -109,18 +109,17 @@ header {
     font-weight: 700;
     font-size: 48px;
     line-height: 64px;
-    /* or 133% */
     text-align: center;
     color: #464547;
 }
 
 .lorem-2 {
+    width: 426px;
     font-family: 'Source Sans Pro';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 32px;
-    /* or 133% */
     text-align: center;
     color: #666666;
 }
@@ -163,7 +162,7 @@ button {
     align-items: center;
     justify-content: space-around;
     height: 637px;
-    background-image: url("/assets/IMG_1334_72dpi_RGB_\ 1.png")
+    background-image: url("../assets/IMG_1334_72dpi_RGB_\ 1.png")
 }
 
 .learn_more {
@@ -243,17 +242,37 @@ footer span {
 .rights_column {
     grid-area: rights;
 }
-@media screen and (max-width: 480px) {
-    *{
-        margin: 0;
-        padding: 0;
+
+@media screen and (max-width: 768px) {
+    * {
+        box-sizing: border-box;
     }
+
     body {
-        width: 480px;
+        width: 100vw;
+        overflow-x: hidden;
     }
+
+    header {
+        width: 100%;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .project{
+        position: relative;
+        margin-right: 0;
+        left: 0;
+        top: 0;
+    }
+
+    .header_menu{
+       cursor: pointer;
+    }
+
     .hero {
         height: 816px;
-        background-image: url("/assets/Desktop_Backgrounds_1920x1200_6\ 3.png");
+        background-image: url("../assets/Desktop_Backgrounds_1920x1200_6\ 3.png");
         background-repeat: no-repeat;
         background-size: auto;
         background-position: center;
@@ -261,17 +280,11 @@ footer span {
         align-items: center;
         flex-direction: column;
     }
-    .project{
-        
-    }
-    .header_menu{
-        margin-top: 49px;
-        margin-left: 400px;
-    }
-    .header_links{
+    
+    .header_links {
         display: none;
-
     }
+
     .headline {
         width: 386.29px;
         height: 117.14px;
@@ -280,12 +293,11 @@ footer span {
         font-weight: 700;
         font-size: 48px;
         line-height: 64px;
-        text-align: center;
         color: #FFFFFF;
         margin-top: 13px;
     }
 
-    .hero__block{
+    .hero__block {
         width: 426px;
         height: 295px;
     }
@@ -297,36 +309,48 @@ footer span {
         align-items: center;
         justify-content: space-around;
     }
-    .lorem-2{
-        margin-top: 30px;
-    }
+
     .section__headline {
-        display: none;
+        text-align: left;
+        width: 100%;
+        height: auto;
+        padding: 0 40px;
     }
-    .section__headline2{
-        width: 355px;
-        height: 261px;
-        font-family: 'Oswald';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 48px;
-        line-height: 64px;
-        text-align: center;
-        color: #464547;
+
+    .lorem-2 {
+        text-align: left;
+        margin-left: 40px;
+        width: auto;
     }
-    .learn__more-container{
+    .text-container{
+        width: 100%;
+    }
+    .text-container p{
+        justify-content: flex-start;
+    }
+
+    button{
+        display: block;
+        left:auto;
+    }
+
+    .learn__more-container {
         height: 637px;
         display: flex;
         flex-direction: column;
     }
-    .text-container{
-        display: flex;
+
+    .polygon {
+        width: 100px;
+    }
+
+    .text-container {
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
     }
 
-    footer{
+    footer {
         height: 292px;
         display: flex;
         flex-direction: column;
@@ -334,12 +358,13 @@ footer span {
         justify-content: space-around;
     }
 
-}
-@media screen and (min-width: 481px) {
-    .header_menu{
-        display: none;
+    .direction_column {
+        text-align: center;
     }
-    .section__headline2{
+}
+
+@media screen and (min-width: 769px) {
+    .header_menu {
         display: none;
     }
 }
